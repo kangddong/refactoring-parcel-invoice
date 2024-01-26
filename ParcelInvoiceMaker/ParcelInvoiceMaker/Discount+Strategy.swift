@@ -8,24 +8,24 @@
 import Foundation
 
 protocol DiscountStrategy {
-    func applyDiscount(delieveryCost: Int) -> Int
+    func applyDiscount(to deliveryCost: Int) -> Int
 }
 
 struct NoDiscount: DiscountStrategy {
-    func applyDiscount(delieveryCost: Int) -> Int {
-        return delieveryCost
+    func applyDiscount(to deliveryCost: Int) -> Int {
+        return deliveryCost
     }
 }
 
 struct VIPDiscount: DiscountStrategy {
-    func applyDiscount(delieveryCost: Int) -> Int {
-        return delieveryCost / 5 * 4
+    func applyDiscount(to deliveryCost: Int) -> Int {
+        return deliveryCost / 5 * 4
     }
 }
 
 struct CouponDiscount: DiscountStrategy {
-    func applyDiscount(delieveryCost: Int) -> Int {
-        return delieveryCost / 2
+    func applyDiscount(to deliveryCost: Int) -> Int {
+        return deliveryCost / 2
     }
 }
 
